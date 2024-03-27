@@ -18,12 +18,15 @@ const XDictionary = () => {
 
   // Function to handle search
   const handleSearch = () => {
-    // Search the dictionary for the search term
+    if (!searchTerm.trim()) {
+      setSearchResult("Please enter a search term.");
+      return;
+    }
+
     const foundWord = dictionary.find(
       (entry) => entry.word.toLowerCase() === searchTerm.toLowerCase()
     );
 
-    // Update search result
     setSearchResult(
       foundWord ? foundWord.meaning : "Word not found in the dictionary."
     );
@@ -31,7 +34,7 @@ const XDictionary = () => {
 
   return (
     <div>
-      <h1>Dictionary App</h1>
+      <h1>XDictionary</h1>
       <input
         type="text"
         placeholder="Enter search term"
@@ -40,14 +43,10 @@ const XDictionary = () => {
       />
       <button onClick={handleSearch}>Search</button>
       <div>
-        {searchResult !== "" &&
-          searchResult !== "Word not found in the dictionary." && (
-            <p>
-              <strong>Definition:</strong> {searchResult}
-            </p>
-          )}
-        {searchResult === "Word not found in the dictionary." && (
-          <p>{searchResult}</p>
+        {searchResult && (
+          <p>
+            <strong>Definition:</strong> {searchResult}
+          </p>
         )}
       </div>
     </div>
@@ -55,4 +54,3 @@ const XDictionary = () => {
 };
 
 export default XDictionary;
-
