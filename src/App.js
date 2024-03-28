@@ -19,7 +19,7 @@ const XDictionary = () => {
   // Function to handle search
   const handleSearch = () => {
     if (!searchTerm.trim()) {
-      setSearchResult("Please enter a search term.");
+      setSearchResult("Word not found in the dictionary.");
       return;
     }
 
