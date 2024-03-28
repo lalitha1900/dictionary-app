@@ -43,12 +43,12 @@ const XDictionary = () => {
       />
       <button onClick={handleSearch}>Search</button>
       <div>
-        {searchResult && (
+        {
           <p>
             <strong>Definition:</strong>
             <div>{searchResult}</div>
           </p>
-        )}
+        }
       </div>
     </div>
   );
