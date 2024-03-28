@@ -45,7 +45,7 @@ const XDictionary = () => {
       <div>
         {searchResult && (
           <p>
-            <strong>Definition:</strong> 
+            <strong>Definition:</strong> <br /><br /><br />
             {searchResult}
           </p>
         )}
