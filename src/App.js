@@ -41,12 +41,12 @@ const XDictionary = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button><br/>
+      <button onClick={handleSearch}>Search</button>
       <div>
         {searchResult && (
           <p>
-            <strong>Definition:</strong> 
-            {searchResult}
+            <strong>Definition:</strong>
+            <div>{searchResult}</div>
           </p>
         )}
       </div>
