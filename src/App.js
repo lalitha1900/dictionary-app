@@ -34,7 +34,7 @@ const XDictionary = () => {
 
   return (
     <div>
-      <h1>XDictionary</h1>
+      <h1>Dictionary App</h1>
       <input
         type="text"
         placeholder="Enter search term"
@@ -45,7 +45,8 @@ const XDictionary = () => {
       <div>
         {searchResult && (
           <p>
-            <strong>Definition:</strong> {searchResult}
+            <strong>Definition:</strong> 
+            {searchResult}
           </p>
         )}
       </div>
